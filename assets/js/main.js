@@ -36,9 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-video]").forEach((el) => {
     const key = el.getAttribute("data-video");
     if (VID[key]) {
+      el.muted = true;
+      el.playsInline = true;
+      el.loop = true;
       el.src = VID[key];
       if (IMG[key]) el.poster = IMG[key];
       el.closest(".video-pending")?.classList.remove("video-pending");
+      el.play().catch(() => {}); // src set after load — autoplay needs an explicit nudge
     }
   });
 });
