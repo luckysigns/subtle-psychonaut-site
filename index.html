@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subtle Psychonaut® — Plant Medicine Elixirs · Quantum Dosing™</title>
+  <meta name="description" content="Sacred plant medicine essence elixirs — ayahuasca, psilocybe, cacao, mapacho — crafted as vibrational expressions for the subtle body. No plant matter. Just resonance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">Subtle Psychonaut<span class="reg">®</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-button" onclick="toggleCart(true)" aria-label="Open bag">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count hidden">0</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="4" x2="20" y1="7" y2="7"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="17" y2="17"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="hero-media">
+        <div class="orb orb-violet" style="width:560px;height:560px;left:50%;bottom:-280px;transform:translateX(-50%);"></div>
+        <div class="orb orb-cyan" style="width:340px;height:340px;right:-120px;top:10%;"></div>
+      </div>
+      <span class="kicker reveal">Quantum Dosing™</span>
+      <h1 class="display reveal reveal-delay-1">It’s the <span class="gradient-text">wave</span>,<br />not the particle.</h1>
+      <p class="subhead reveal reveal-delay-2">Sacred plant medicine, distilled to pure vibration. Our essence elixirs carry the resonance of the medicine — with zero plant matter, alkaloids, or psychoactive compounds.</p>
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a class="btn btn-primary" href="shop.html">Shop Elixirs</a>
+        <a class="btn btn-ghost" href="#essence">What is an essence?</a>
+      </div>
+      <div class="hero-scroll-hint">Scroll</div>
+    </header>
+
+    <!-- ============ FEATURED PRODUCT VIDEO ============ -->
+    <section class="section-pad" id="featured">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="kicker">The Collection</span>
+          <h2 class="headline">Meet the elixirs.</h2>
+          <p class="subhead" style="margin-left:auto;margin-right:auto;">Each essence is calibrated to a specific plant medicine frequency — supporting energetic alignment, spiritual clarity, and integration.</p>
+        </div>
+
+        <div class="feature-row reveal">
+          <div class="feature-media video-pending">
+            <video data-video="ayahuasca" autoplay muted loop playsinline poster=""></video>
+            <img data-img="ayahuasca" alt="Ayahuasca Elixir — Quantum Dosing Essence" class="video-fallback" />
+          </div>
+          <div class="feature-copy">
+            <span class="kicker" style="color:var(--gold)">Ayahuasca Elixir</span>
+            <h3>Vine and leaf,<br />in unity.</h3>
+            <p>Supporting evolution, seeing into fears, and teaching discernment — so we may be free to be who we are, free in our innate expressions.</p>
+            <p>Structured water infused with vibrational frequency. Stabilized naturally. Nothing else.</p>
+            <a class="btn-link" href="shop.html">Shop Ayahuasca →</a>
+          </div>
+        </div>
+
+        <div class="feature-row reverse reveal">
+          <div class="feature-media video-pending">
+            <video data-video="psilocybe" autoplay muted loop playsinline poster=""></video>
+            <img data-img="psilocybe" alt="Psilocybe Elixir — Quantum Dosing Essence" class="video-fallback" />
+          </div>
+          <div class="feature-copy">
+            <span class="kicker" style="color:var(--cyan)">Psilocybe Elixir</span>
+            <h3>The flower<br />of the fungi.</h3>
+            <p>Supporting synaptic connection with nature and ourselves, harmonizing nervous systems, communion with ourSelves and each other.</p>
+            <p>The same bottles, the same reverence — resonance you can carry in a pocket.</p>
+            <a class="btn-link" href="shop.html">Shop Psilocybe →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT IS AN ESSENCE ============ -->
+    <section class="section-pad" id="essence" style="background:linear-gradient(to bottom, transparent, rgba(124,92,240,0.06), transparent);">
+      <div class="container">
+        <div class="feature-row reveal">
+          <div class="feature-media">
+            <img data-img="essenceFlower" alt="A flower in full bloom — the highest expression of the plant" loading="lazy" />
+          </div>
+          <div class="feature-copy">
+            <span class="kicker">The Craft</span>
+            <h3>What is an<br />essence elixir?</h3>
+            <p>A flower is the highest expression of the plant — wide open in full bloom, the pinnacle of vitality. An essence is that living vibration, lovingly held and amplified through pure water.</p>
+            <p>When we ingest, bathe in, or simply keep an essence near, the plant’s vibration sings — reverberating and harmonizing us toward our natural order and our higher octaves.</p>
+            <a class="btn-link" href="about.html">Our story →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATEMENT ============ -->
+    <section class="statement">
+      <div class="orb orb-violet" style="width:420px;height:420px;left:-160px;top:20%;"></div>
+      <h2 class="reveal">“<span class="serif-accent gradient-text">Essences are first assimilated into the circulatory system… life force works through the blood, consciousness through the nervous system.</span>”</h2>
+      <p class="attribution reveal">— Gurudas, on vibrational remedies</p>
+    </section>
+
+    <!-- ============ SOUL & BODY ============ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="kicker">Soul &amp; Body</span>
+          <h2 class="headline">Made with reverence.</h2>
+        </div>
+        <div class="ritual-grid">
+          <div class="ritual-card reveal">
+            <span class="ritual-num">i</span>
+            <h4>Sourced &amp; held sacred</h4>
+            <p>Our plant medicines are sourced from trusted growers and brewers, and held reverently through every step.</p>
+          </div>
+          <div class="ritual-card reveal reveal-delay-1">
+            <span class="ritual-num">ii</span>
+            <h4>Co-created with nature</h4>
+            <p>Essences are infused in sun and moonlight — sometimes with the support of gems and stones — with loving support of each plant spirit and Pachamama Gaia.</p>
+          </div>
+          <div class="ritual-card reveal reveal-delay-2">
+            <span class="ritual-num">iii</span>
+            <h4>Born in ceremony</h4>
+            <p>The elixirs arose out of inspiration while sitting with direct plant medicine — a co-creation with the Earth, offered to humanity as a service.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMING SOON ============ -->
+    <section class="section-pad" style="padding-top:0;">
+      <div class="container">
+        <div class="banner-cta reveal">
+          <div class="orb orb-gold" style="width:380px;height:380px;left:-100px;bottom:-190px;"></div>
+          <span class="kicker" style="color:var(--gold)">Coming Soon</span>
+          <h2>Cacao &amp; Mapacho</h2>
+          <p>Essence of Cacao and Essence of Mapacho (sacred tobacco) join the collection soon — with a refreshed label design in the works.</p>
+          <a class="btn btn-ghost" href="contact.html">Get notified</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="section-pad" style="padding-top:0;">
+      <div class="container" style="text-align:center;">
+        <div class="section-header reveal" style="margin-bottom:34px;">
+          <span class="kicker">Be in touch</span>
+          <h2 class="headline">Join the field.</h2>
+          <p class="subhead" style="margin:16px auto 0;">Sign up for updates and receive 10% off your first order.</p>
+        </div>
+        <form class="newsletter-form reveal" onsubmit="return handleNewsletter(event)">
+          <input type="email" placeholder="Email address" required />
+          <button class="btn btn-primary" type="submit">Sign Up</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="nav-logo" href="index.html">Subtle Psychonaut<span class="reg">®</span></a>
+            <p>Your trusted source for plant medicine elixirs. Quantum Dosing™ — it’s the wave, not the particle.</p>
+          </div>
+          <div>
+            <h5>Explore</h5>
+            <ul>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Support</h5>
+            <ul>
+              <li><a href="contact.html">Shipping &amp; Returns</a></li>
+              <li><a href="contact.html">Wholesale</a></li>
+              <li><a href="contact.html">Work with Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Follow</h5>
+            <ul>
+              <li><a href="https://www.instagram.com/subtlepsychonaut/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=100095370751666" target="_blank" rel="noopener">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-disclaimer">
+          Quantum Dosing™ essences are vibrational preparations of structured water with a natural stabilizer (25% alcohol). They contain zero physical plant material, alkaloids, or psychoactive compounds. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
+        </div>
+        <div class="footer-legal">
+          <span>© 2026 Subtle Psychonaut®. All rights reserved.</span>
+          <span>Made with reverence in co-creation with Gaia.</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

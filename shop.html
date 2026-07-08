@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Subtle Psychonaut® · Quantum Dosing™ Essence Elixirs</title>
+  <meta name="description" content="Shop Quantum Dosing™ essence elixirs — Ayahuasca and Psilocybe, with Cacao and Mapacho coming soon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">Subtle Psychonaut<span class="reg">®</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-button" onclick="toggleCart(true)" aria-label="Open bag">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count hidden">0</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="4" x2="20" y1="7" y2="7"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="17" y2="17"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <header class="page-hero">
+      <div class="orb orb-violet" style="width:480px;height:480px;left:50%;top:-240px;transform:translateX(-50%);"></div>
+      <span class="kicker reveal">The Apothecary</span>
+      <h1 class="display reveal reveal-delay-1" style="font-size:clamp(40px,6vw,72px);">Essence <span class="gradient-text">Elixirs</span></h1>
+      <p class="subhead reveal reveal-delay-2" style="margin:20px auto 0;">Vibrational expressions of sacred plant medicine. Choose your resonance.</p>
+    </header>
+
+    <section class="section-pad" style="padding-top:20px;">
+      <div class="container">
+        <div class="product-grid" id="productGrid"><!-- rendered by JS --></div>
+
+        <div class="banner-cta reveal" style="margin-top:60px;">
+          <div class="orb orb-gold" style="width:340px;height:340px;right:-80px;top:-170px;"></div>
+          <span class="kicker" style="color:var(--gold)">Coming Soon</span>
+          <h2 style="font-size:clamp(26px,3.6vw,40px);">Cacao &amp; Mapacho Elixirs</h2>
+          <p>Two new essences join the collection soon — along with a refreshed label design. Same medicine, elevated look.</p>
+          <a class="btn btn-ghost" href="contact.html">Get notified</a>
+        </div>
+
+        <p class="form-note reveal" style="text-align:center;margin-top:46px;">
+          Every bottle: structured water infused with vibrational frequency · natural stabilizer (25% alcohol) · zero physical plant material or derivatives.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="nav-logo" href="index.html">Subtle Psychonaut<span class="reg">®</span></a>
+            <p>Your trusted source for plant medicine elixirs. Quantum Dosing™ — it’s the wave, not the particle.</p>
+          </div>
+          <div>
+            <h5>Explore</h5>
+            <ul>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Support</h5>
+            <ul>
+              <li><a href="contact.html">Shipping &amp; Returns</a></li>
+              <li><a href="contact.html">Wholesale</a></li>
+              <li><a href="contact.html">Work with Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Follow</h5>
+            <ul>
+              <li><a href="https://www.instagram.com/subtlepsychonaut/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=100095370751666" target="_blank" rel="noopener">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-disclaimer">
+          Quantum Dosing™ essences are vibrational preparations of structured water with a natural stabilizer (25% alcohol). They contain zero physical plant material, alkaloids, or psychoactive compounds. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
+        </div>
+        <div class="footer-legal">
+          <span>© 2026 Subtle Psychonaut®. All rights reserved.</span>
+          <span>Made with reverence in co-creation with Gaia.</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* Render product cards from the catalog in main.js */
+    document.addEventListener("DOMContentLoaded", () => {
+      const grid = document.getElementById("productGrid");
+      grid.innerHTML = PRODUCTS.map((p) => {
+        const allOut = p.variants.every((v) => !v.available);
+        const defaultVariant = p.variants.find((v) => v.available) || p.variants[0];
+        const pills = p.variants
+          .map(
+            (v) => `<button class="size-pill ${v.sku === defaultVariant.sku ? "selected" : ""}"
+              data-product="${p.id}" data-sku="${v.sku}" data-price="${v.price}"
+              ${v.available ? "" : "disabled title='Sold out'"}
+              onclick="selectSize(this)">${v.size}</button>`
+          )
+          .join("");
+        return `
+        <article class="product-card reveal">
+          <div class="product-media">
+            <img src="${p.img}" alt="${p.name} — Quantum Dosing™ Essence" loading="lazy" />
+            ${allOut ? `<span class="product-badge soldout">Sold Out</span>` : `<span class="product-badge">Quantum Dosing™</span>`}
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">${p.name}</h3>
+            <div class="form-note">${p.tagline}</div>
+            <p class="product-desc">${p.desc}</p>
+            <div class="size-pills">${pills}</div>
+            <div class="product-foot">
+              <div class="product-price" id="price-${p.id}">$${defaultVariant.price.toFixed(2)} <span class="unit">/ ${defaultVariant.size}</span></div>
+              <button class="add-btn" id="add-${p.id}" data-sku="${defaultVariant.sku}"
+                ${defaultVariant.available ? "" : "disabled"}
+                onclick="addToCart(this.dataset.sku)">Add to Bag</button>
+            </div>
+          </div>
+        </article>`;
+      }).join("");
+      initReveal(); // re-scan newly added .reveal elements
+    });
+
+    function selectSize(btn) {
+      const productId = btn.dataset.product;
+      document.querySelectorAll(`.size-pill[data-product="${productId}"]`).forEach((b) => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      const hit = findVariant(btn.dataset.sku);
+      const price = document.getElementById(`price-${productId}`);
+      const add = document.getElementById(`add-${productId}`);
+      if (hit && price && add) {
+        price.innerHTML = `$${hit.variant.price.toFixed(2)} <span class="unit">/ ${hit.variant.size}</span>`;
+        add.dataset.sku = hit.variant.sku;
+        add.disabled = !hit.variant.available;
+        add.textContent = hit.variant.available ? "Add to Bag" : "Sold Out";
+      }
+    }
+  </script>
+</body>
+</html>
