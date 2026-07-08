@@ -278,7 +278,7 @@ function initStarfield() {
     for (const s of stars) {
       const tw = reduced ? 1 : 0.6 + 0.4 * Math.sin(t / 1000 * s.speed + s.phase);
       ctx.globalAlpha = s.base * tw;
-      ctx.fillStyle = "#cdd3ff";
+      ctx.fillStyle = "#e8d5ae"; /* warm fireflies, not cold stars */
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
       ctx.fill();
