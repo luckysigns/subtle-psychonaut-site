@@ -310,7 +310,13 @@ function initReveal() {
     },
     { threshold: 0.12 }
   );
-  els.forEach((el) => io.observe(el));
+  els.forEach((el) => {
+    // Anything already in the viewport shows immediately — don't gate
+    // above-the-fold content on observer timing.
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) el.classList.add("visible");
+    else io.observe(el);
+  });
 }
 
 /* ---------- Nav ---------- */
