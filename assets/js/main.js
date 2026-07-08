@@ -14,7 +14,7 @@ const IMG = {
   // Original photography (hers) for story/about sections
   ayahuascaOriginal: "https://static1.squarespace.com/static/64b9e7f03251ee572602e6d5/64bb46f681a08e68a53ec1fb/64bf383ac3f79d10f402f14b/1753736502202/IMG_1878.jpeg?format=1000w",
   psilocybeOriginal: "https://static1.squarespace.com/static/64b9e7f03251ee572602e6d5/64bb46f681a08e68a53ec1fb/64bf3ba7c3f79d10f402f256/1753737475817/IMG_1863.jpeg?format=1000w",
-  lineup: "https://static1.squarespace.com/static/64b9e7f03251ee572602e6d5/t/64cd75815a0bde6b4484f557/1691186570834/IMG_1885.jpeg?format=1000w",
+  lineup: "https://d8j0ntlcm91z4.cloudfront.net/user_3G0lQGP4VZWUZp8ediTC8en9oKa/hf_20260708_041929_76325752-e009-48cb-9e85-10c721d3c42e.png", // approved altar banner (original: IMG_1885 on Squarespace CDN)
   journey: "https://images.squarespace-cdn.com/content/v1/64b9e7f03251ee572602e6d5/1691193587725-UVYA52HQ07RDUCTL521E/image-asset.jpeg?format=1000w",
   essenceWater: "https://images.squarespace-cdn.com/content/v1/64b9e7f03251ee572602e6d5/1694722048327-AUYEQ8OY0ZG1V9PMIT0V/image-asset.jpeg?format=1000w",
   essenceFlower: "https://images.squarespace-cdn.com/content/v1/64b9e7f03251ee572602e6d5/1694709242576-UE0R0LIWGEPELEMZ3HWV/image-asset.jpeg?format=1000w",
