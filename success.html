@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Received — Subtle Psychonaut®</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">Subtle Psychonaut<span class="reg">®</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions"></div>
+    </div>
+  </nav>
+
+  <div class="page">
+    <section class="hero" style="min-height:88svh;">
+      <div class="hero-media">
+        <div class="orb orb-gold" style="width:520px;height:520px;left:50%;bottom:-260px;transform:translateX(-50%);"></div>
+      </div>
+      <span class="kicker reveal">Order Received</span>
+      <h1 class="display reveal reveal-delay-1" style="font-size:clamp(36px,5.4vw,64px);">Thank you.<br /><span class="gradient-text serif-accent">The essences are on their way.</span></h1>
+      <p class="subhead reveal reveal-delay-2" style="margin:24px auto 0;">A receipt has been emailed to you. Each elixir is packed by hand, with care — it will ship shortly.</p>
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a class="btn btn-primary" href="index.html">Back to Home</a>
+        <a class="btn btn-ghost" href="about.html">How to use your essences</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-disclaimer">
+          Quantum Dosing™ essences are vibrational preparations of structured water with a natural stabilizer (25% alcohol). They contain zero physical plant material, alkaloids, or psychoactive compounds. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
+        </div>
+        <div class="footer-legal">
+          <span>© 2026 Subtle Psychonaut®. All rights reserved.</span>
+          <span>Made with reverence in co-creation with Gaia.</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Order complete — empty the bag
+    try { localStorage.removeItem("sp_cart_v1"); } catch (e) {}
+    window.__memCart = [];
+    document.addEventListener("DOMContentLoaded", renderCartCount);
+  </script>
+</body>
+</html>

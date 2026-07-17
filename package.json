@@ -1,0 +1,8 @@
+{
+  "name": "subtle-psychonaut-site",
+  "private": true,
+  "description": "Subtle Psychonaut — static site + Stripe checkout functions",
+  "dependencies": {
+    "stripe": "^16.12.0"
+  }
+}

@@ -161,8 +161,37 @@ function cartSubtotal(cart) {
 async function checkout() {
   const cart = loadCart();
   if (!cart.length) return;
-  toast("Checkout opens soon — Stripe integration in progress ✦");
+  const items = cart
+    .map((l) => {
+      const hit = findVariant(l.sku);
+      return hit && hit.variant.priceId ? { price: hit.variant.priceId, quantity: l.qty } : null;
+    })
+    .filter(Boolean);
+  if (items.length !== cart.length) {
+    toast("Checkout opens soon — finishing setup ✦");
+    return;
+  }
+  toast("Opening secure checkout…");
+  try {
+    const res = await fetch("/api/create-checkout-session", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items }),
+    });
+    const data = await res.json();
+    if (data.url) window.location.href = data.url;
+    else throw new Error(data.error || "No checkout URL");
+  } catch (e) {
+    toast("Checkout is unavailable right now — please try again shortly");
+  }
 }
+
+/* Returning from a cancelled checkout */
+document.addEventListener("DOMContentLoaded", () => {
+  if (new URLSearchParams(location.search).get("checkout") === "cancelled") {
+    setTimeout(() => toast("Checkout cancelled — your bag is saved ✦"), 600);
+  }
+});
 
 /* ============================================================
    UI scaffolding injected on every page
