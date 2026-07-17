@@ -7,10 +7,10 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 /* Only these live price IDs can be purchased through this endpoint.
    REPLACE the placeholders with the real price_... IDs from the Stripe dashboard. */
 const ALLOWED_PRICES = new Set([
-  "price_REPLACE_VINE_LEAF_30",
-  "price_REPLACE_VINE_LEAF_60",
-  "price_REPLACE_FUNGI_30",
-  "price_REPLACE_FUNGI_60",
+  "price_1Tu0aJGWZGeGjGROF8SZDc2Q", // Vine & Leaf (Ayahuasca) 30ml — $30
+  "price_1Tu0bJGWZGeGjGROrdtNC3jY", // Vine & Leaf (Ayahuasca) 60ml — $40
+  "price_1Tu0bfGWZGeGjGRO7BpVnHuO", // Flower of the Fungi (Psilocybe) 30ml — $30
+  "price_1Tu0brGWZGeGjGROHzheMcfT", // Flower of the Fungi (Psilocybe) 60ml — $40
 ]);
 
 module.exports = async (req, res) => {
