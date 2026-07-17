@@ -69,7 +69,7 @@ const PRODUCTS = [
     desc: "The flower of the fungi. Crafted to evoke the energetic imprint of the psilocybe experience — structured water infused with vibrational frequency, stabilized with 25% alcohol. Zero plant material, alkaloids, or psychoactive compounds.",
     img: IMG.psilocybe,
     variants: [
-      { sku: "psi-30", size: "30ml", price: 30, available: false, priceId: "price_1Tu0bfGWZGeGjGRO7BpVnHuO" }, // sold out
+      { sku: "psi-30", size: "30ml", price: 30, available: true, priceId: "price_1Tu0bfGWZGeGjGRO7BpVnHuO" },
       { sku: "psi-60", size: "60ml", price: 40, available: true, priceId: "price_1Tu0brGWZGeGjGROHzheMcfT" },
     ],
   },
@@ -209,7 +209,7 @@ function injectChrome() {
       <div class="cart-items" id="cartItems"></div>
       <div class="cart-foot">
         <div class="cart-subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
-        <div class="cart-note">Shipping calculated at checkout. Secure payment by Stripe — coming online soon.</div>
+        <div class="cart-note">Free US shipping. Secure payment by Stripe.</div>
         <button class="btn btn-primary" onclick="checkout()">Check Out</button>
       </div>
     </aside>
